@@ -28,6 +28,7 @@ For further details on the hardware:
 
 # 1. Build the C program
 
+
 Download the **iis2iclx_tilt_angle_DT_generator.c** file to your PC. The program may be modified according to one's needs in a text editor. However, in many cases or for a basic evaluation, the program is sufficient without any modifications.
 
 Open the Windows Command Prompt (e.g. press Win+R, type cmd and press Enter key) and go to the folder, where the **iis2iclx_tilt_angle_DT_generator.c** is located. For instance, if the file is located in *"C:\tilt_angle_dual_plan\angle_customization_script"*, then you can use the following command:
@@ -60,10 +61,11 @@ This program creates two text files (in *"./dec_tree"* folder), each of which co
 The program also displays useful information in the Command Prompt, that is then needed for *.ucf* file generation (it is described in the following section).
 <img src="./images/prog_run.png" alt="prog_run" style="zoom:60%;" />
 
+
 It is possible to configure following parameters of the program from the Windows Command Prompt:
 
 - **Angle range** *(default: +/- 20 degrees)*. It must be an integer in range from 2 to 90 [deg]. The final angle range is symmetrical around zero.
-- **Output folder name**, where two text files with the decision trees should be stored *(default: "dec_tree")*. It must start with an alphabet character and must not contain following special characters: `<,>:\"/\\|?*@\'^.`.
+- **Output folder name**, where two text files with the decision trees should be stored *(default: "dec_tree")*. The folder will be created in the same folder where the program is run and its name can't contain any of the following characters: `\/:*?\"<>|`.
 
 
 The program supports the following options:
@@ -91,3 +93,6 @@ The parameters are configured as follows:
 **Angle range** = +/- 25 degrees
 
 **Folder name** = "my_folder"
+
+
+
