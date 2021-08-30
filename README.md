@@ -47,13 +47,17 @@ The program supports the following options:
 
 `-h`	Display help message.
 
-######Example:
+
+**Example:**
 
 Following command only prints help of the program:
 ```
 iis2iclx_tilt_angle_DT_generator.exe -h
 ```
 
+```
+
+```
 
 Following command executes the program with modified parameters:
 ```
