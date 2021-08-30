@@ -2,7 +2,7 @@ This README file describes how to build and use the **iis2iclx_tilt_angle_DT_gen
 
 ## **Software:**
 
-The main and mandatory SW for this example is the [**Unico-GUI**](https://www.st.com/en/development-tools/unico-gui.html), a graphical user interface (available for Linux, Mac OSX and Windows) that supports the **ProfiMEMSTool** (further description of the ProfiMEMSTool is in the *Hardware* paragraph). The Unico-GUI also allows to build an **MLC** program or a sensor configuration file without any board connected (offline mode).
+The main and mandatory SW for this example is the [**Unico-GUI**](https://www.st.com/en/development-tools/unico-gui.html), a graphical user interface (available for Linux, Mac OSX and Windows) that supports the **ProfiMEMSTool** motherboard and allows to build an **MLC** program (even without any board connected = offline mode) or a sensor configuration file.
 
 For further example evaluation it is worth to mention following SW tools:
 - [**Unicleo GUI**](https://www.st.com/en/development-tools/unicleo-gui.html), a PC application that supports **STM32 Nucleo boards** coupled with an STM32 Nucleo **MEMS expansion board** for data visualization and demonstration of functionality of ST sensors and algorithms.
