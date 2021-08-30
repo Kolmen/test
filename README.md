@@ -41,14 +41,14 @@ It is possible to configure following parameters of the program from the Windows
 
 The program supports the following options:
 
-  `-a`	Set the Angle range
+`-a`	Set the Angle range
 
-  `-o`	Set the Output folder name
+`-o`	Set the Output folder name
 
-  `-h`	Display help message.
+`-h`	Display help message.
 
 
-**Example:**
+**Example usages:**
 
 1. Following command only prints help of the program:
 ```
@@ -61,5 +61,6 @@ iis2iclx_tilt_angle_DT_generator.exe -a 25 -o my_folder
 ```
 The parameters are configured as follows:
 
-  **Angle range** = +/- 25 degrees
-  **Folder name** = "my_folder"
+**Angle range** = +/- 25 degrees
+
+**Folder name** = "my_folder"
