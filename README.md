@@ -2,7 +2,7 @@ This README file describes how to build and use the **iis2iclx_tilt_angle_DT_gen
 
 **Software:**
 
-The main and mandatory SW for this example is the [Unico GUI](https://www.st.com/en/development-tools/unico-gui.html), a graphical user interface (available for Windows, MacOS and Unix) that supports the **ProfiMEMSTool** (further description of the ProfiMEMSTool is in the *Hardware* paragraph), but it also enables possibility to build an **MLC** program or a sensor configuration file without any board connected (offline mode).
+The main and mandatory SW for this example is the [Unico-GUI](https://www.st.com/en/development-tools/unico-gui.html), a graphical user interface (available for Linux, Mac OSX and Windows) that supports the **ProfiMEMSTool** (further description of the ProfiMEMSTool is in the *Hardware* paragraph). The Unico-GUI also allows to build an **MLC** program or a sensor configuration file without any board connected (offline mode).
 
 For further example evaluation it is worth to mention following SW tools:
 - [**Unicleo GUI**](https://www.st.com/en/development-tools/unicleo-gui.html), a PC application that supports [STM32 Nucleo boards](https://www.st.com/en/evaluation-tools/stm32-nucleo-boards.html) boards coupled with STM32 Nucleo expansion boards (like the [X-Nucleo-IKS02A1](https://www.st.com/en/ecosystems/x-nucleo-iks02a1.html)) for data visoalization and demonstration of functionality of ST sensors and algorithms.
@@ -54,7 +54,10 @@ iis2iclx_tilt_angle_DT_generator.exe
 
 This program creates two text files (in *"./dec_tree"* folder), each of which contains a decision tree (one for the x axis and one for y axis of the accelerometer) in the format required by Unico to generate the MLC. Each decision tree contains 255 acceleration threshold levels to be detected, symmetrically spaced around zero in the specified angular range (default is +/- 20 degrees). The acceleration threshold levels correspond to the respective angles of inclination.
 
-Please note, that typical sensor errors (like zero-g offset, sensitivity error, etc.) are not considered in this example. If more accurate measurement is required, the calibration must be performed and then projected into the calculated threshold levels (modification of the program is then needed).
+*Please note, that typical sensor errors (like zero-g offset, sensitivity error, etc.) are not considered in this example. If more accurate measurement is required, the calibration must be performed and then projected into the calculated threshold levels (modification of the program is then needed).*
+
+The program also displays useful information in the Command Prompt, that is then needed for *.ucf* file generation (it is described in the following section).
+<img src="./images/prog_run.png" alt="prog_run" style="zoom:60%;" />
 
 It is possible to configure following parameters of the program from the Windows Command Prompt:
 
