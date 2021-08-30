@@ -12,7 +12,7 @@ For further example evaluation it is worth to mention following SW tools:
 
 ## **Hardware:**
 
-This example is meant to be used with the [**IIS2ICLX**](https://www.st.com/en/mems-and-sensors/iis2iclx.html), dual-axis high-accuracy, high-resolution, low-power, digital inclinometer (accelerometer) with embedded Machine Learning Core (MLC). For the purpose of this example, one can use a DIL24 adapter board with the IIS2ICLX, called [**STEVAL-MKI209V1K**](https://www.st.com/en/evaluation-tools/steval-mki209v1k.html).
+This example is meant to be used with the [**IIS2ICLX**](https://www.st.com/en/mems-and-sensors/iis2iclx.html), dual-axis high-accuracy, high-resolution, low-power, digital inclinometer (accelerometer) with embedded Machine Learning Core (MLC). For the purpose of this example, it is also possible to use the [**STEVAL-MKI209V1K**](https://www.st.com/en/evaluation-tools/steval-mki209v1k.html), a dedicated DIL24 adapter board for the IIS2ICLX.
 
 ST provides many ways to evaluate the example. The two most common ways use the following boards:
 1. [**STEVAL-MKI109V3**](https://www.st.com/en/evaluation-tools/steval-mki109v3.html), or also known as **ProfiMEMSTool** motherboard, that is compatible with all ST MEMS sensors on a DIL24 adapter board. The board is supported by the **Unico-GUI** PC application and is used for sensor performance evaluation.
