@@ -35,15 +35,15 @@ Please note, that typical sensor errors (like zero-g offset, sensitivity error, 
 
 It is possible to configure following parameters of the program from the Windows Command Prompt:
 
-- **Angle range** *(default: +/- 20 degrees)*. It must be an integer in range from 2 to 90 [deg] (the final angle range is symmetrical around zero).
-- **Folder name**, where two text files with the decision trees should be stored *(default: "dec_tree")*. It must start with an alphabet character and must not contain following special characters: `<,>:\"/\\|?*@\'^.`.
+- **Angle range** *(default: +/- 20 degrees)*. It must be an integer in range from 2 to 90 [deg]. The final angle range is symmetrical around zero.
+- **Output folder name**, where two text files with the decision trees should be stored *(default: "dec_tree")*. It must start with an alphabet character and must not contain following special characters: `<,>:\"/\\|?*@\'^.`.
 
 
 The program supports the following options:
 
-`-a`	Set the angle range parameter
+`-a`	Set the Angle range
 
-`-o`	Set the output folder name
+`-o`	Set the Output folder name
 
 `-h`	Display help message.
 
