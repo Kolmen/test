@@ -1,5 +1,26 @@
 This README file describes how to build and use the **iis2iclx_tilt_angle_DT_generator.c** program to generate two decision trees for tilt sensing, how to create from the decision trees an .ucf configuration file for the **Machine Learning Core (MLC)** of the [**IIS2ICLX**](https://www.st.com/en/mems-and-sensors/iis2iclx.html) and finally how to evaluate the result.
 
+**Software:**
+
+
+- [Unico GUI](https://www.st.com/en/development-tools/unico-gui.html) software tool to work with ProfiMEMS evaluation board (STEVAL-MKI109V3).
+- [Unicleo GUI](https://www.st.com/en/development-tools/unicleo-gui.html) software tool to work with [Nucleo](https://www.st.com/en/evaluation-tools/stm32-nucleo-boards.html) motherboards coupled with X-Nucleo expansion boards, and in particular the MEMS expansions (the latest is [X-Nucleo-IKS01A3](https://www.st.com/content/st_com/en/products/ecosystems/stm32-open-development-environment/stm32-nucleo-expansion-boards/stm32-ode-sense-hw/x-nucleo-iks01a3.html))
+- [AlgoBuilder GUI](https://www.st.com/content/st_com/en/products/embedded-software/mems-and-sensors-software/inemo-engine-software-libraries/algobuilder.html) software tool to design a custom processing flow and build the firmware for Nucleo boards coupled with the MEMS expansions, or for form-factor evaluation boards such as the [SensorTile.box](https://www.st.com/content/st_com/en/products/evaluation-tools/product-evaluation-tools/mems-motion-sensor-eval-boards/steval-mksbox1v1.html)
+- [X-CUBE-MEMS1](https://www.st.com/en/embedded-software/x-cube-mems1.html)
+
+
+**Hardware:**
+This example is meant to be used with the [**IIS2ICLX**](https://www.st.com/en/mems-and-sensors/iis2iclx.html), dual-axis high-accuracy, high-resolution, low-power, digital inclinometer (accelerometer) with embedded Machine Learning Core (MLC). For the purpose of this example, one can use a DIL24 adapter board with the IIS2ICLX, called [**STEVAL-MKI209V1K**](https://www.st.com/en/evaluation-tools/steval-mki209v1k.html).
+
+ST provides many ways to evaluate the example. The two most common ways use the following boards:
+1. [**STEVAL-MKI109V3**](https://www.st.com/en/evaluation-tools/steval-mki109v3.html), or also known as **ProfiMEMSTool** motherboard, that is compatible with all ST MEMS sensors on a DIL24 adapter board. The board is supported by the **Unico-GUI** PC application and is used for sensor performance evaluation.
+2. One of our [**Nucleo boards**](https://www.st.com/en/evaluation-tools/stm32-nucleo-boards.html), for example the [**NUCLEO-F401RE**](https://www.st.com/en/evaluation-tools/nucleo-f401re.html), with a MEMS expansion board, e.g. the [**X-NUCLEO-IKS02A1**](https://www.st.com/en/ecosystems/x-nucleo-iks02a1.html). This set of boards is supported by the **X-CUBE-MEMS1 SW** package *(only selected Nucleo boards are supported)* and the results can be visualized in the **Unicleo-GUI**.
+
+For further details on the hardware:
+- ST resource page on [MEMS sensor](https://www.st.com/mems)
+- ST resource page on [Explore Machine Learning Core in MEMS sensors](https://www.st.com/content/st_com/en/campaigns/machine-learning-core.html)
+- Application note [AN5536](https://www.st.com/resource/en/application_note/an5536-iis2iclx-machine-learning-core-stmicroelectronics.pdf) on MLC embedded in [IIS2ICLX](https://www.st.com/en/mems-and-sensors/iis2iclx.html)
+
 
 # 1. Build the C program
 First, it is necessary to install a C compiler. The following lines show the procedure of compilation with the GCC compiler on Windows (using [**Cygwin**](https://www.cygwin.com/)). Cygwin *bin* directory (typically *"C:\cygwin64\bin"*) should be added to the Windows PATH environment variable. Sucessfull GCC installation can be checked by writing `gcc -v` command in the Windows Command prompt (it should display the GCC configuration and its version).
