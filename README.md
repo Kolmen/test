@@ -1,6 +1,6 @@
 This README file describes how to build and use the **iis2iclx_tilt_angle_DT_generator.c** program to generate two decision trees for tilt sensing, how to create from the decision trees an .ucf configuration file for the **Machine Learning Core (MLC)** of the [**IIS2ICLX**](https://www.st.com/en/mems-and-sensors/iis2iclx.html) and finally how to evaluate the result.
 
-**Software:**
+## **Software:**
 
 The main and mandatory SW for this example is the [**Unico-GUI**](https://www.st.com/en/development-tools/unico-gui.html), a graphical user interface (available for Linux, Mac OSX and Windows) that supports the **ProfiMEMSTool** (further description of the ProfiMEMSTool is in the *Hardware* paragraph). The Unico-GUI also allows to build an **MLC** program or a sensor configuration file without any board connected (offline mode).
 
@@ -10,7 +10,7 @@ For further example evaluation it is worth to mention following SW tools:
 - [**X-CUBE-MEMS1**](https://www.st.com/en/embedded-software/x-cube-mems1.html), an expansion software package for **STM32 Nucleo boards** that includes drivers, various sensor sample applications and advanced motion libraries.
 
 
-**Hardware:**
+## **Hardware:**
 
 This example is meant to be used with the [**IIS2ICLX**](https://www.st.com/en/mems-and-sensors/iis2iclx.html), dual-axis high-accuracy, high-resolution, low-power, digital inclinometer (accelerometer) with embedded Machine Learning Core (MLC). For the purpose of this example, one can use a DIL24 adapter board with the IIS2ICLX, called [**STEVAL-MKI209V1K**](https://www.st.com/en/evaluation-tools/steval-mki209v1k.html).
 
