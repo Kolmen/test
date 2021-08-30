@@ -21,7 +21,7 @@ ST provides many ways to evaluate the ST MEMS sensors in general. In this exampl
 For further details on the hardware:
 - ST resource page on [MEMS sensor](https://www.st.com/mems)
 - ST resource page on [Explore Machine Learning Core in MEMS sensors](https://www.st.com/content/st_com/en/campaigns/machine-learning-core.html)
-- Application note [AN5536](https://www.st.com/resource/en/application_note/an5536-iis2iclx-machine-learning-core-stmicroelectronics.pdf) on MLC embedded in [IIS2ICLX](https://www.st.com/en/mems-and-sensors/iis2iclx.html)
+- Application note [AN5536](https://www.st.com/resource/en/application_note/an5536-iis2iclx-machine-learning-core-stmicroelectronics.pdf) on the Machine Learning Core embedded in the [IIS2ICLX](https://www.st.com/en/mems-and-sensors/iis2iclx.html)
 
 
 # 1. Build the C program
