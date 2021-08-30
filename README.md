@@ -39,7 +39,8 @@ It is possible to configure following parameters of the program from the Windows
 - **Folder name**, where two text files with the decision trees should be stored *(default: "dec_tree")*
 
 The **Angle range** must be an integer in range from 2 to 90 [deg] (the final angle range is symmetrical around zero).
-THe **Folder name** must start with an alphabet character and must not contain following special characters: `<,>:\"/\\|?*@\'^.`.
+
+The **Folder name** must start with an alphabet character and must not contain following special characters: `<,>:\"/\\|?*@\'^.`.
 
 The program supports the following options:
 
