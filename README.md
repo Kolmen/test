@@ -2,19 +2,21 @@ This README file describes how to build and use the **iis2iclx_tilt_angle_DT_gen
 
 **Software:**
 
+The main and mandatory SW is the [Unico GUI](https://www.st.com/en/development-tools/unico-gui.html), a graphical user interface (available for Windows, MacOS and Unix) that supports the **ProfiMEMSTool** (further description of the ProfiMEMSTool is in the *Hardware* paragraph), but it also enables possibility to build create an **MLC** program and sensor configuration file offline, without any board connected.
 
-- [Unico GUI](https://www.st.com/en/development-tools/unico-gui.html) software tool to work with ProfiMEMS evaluation board (STEVAL-MKI109V3).
-- [Unicleo GUI](https://www.st.com/en/development-tools/unicleo-gui.html) software tool to work with [Nucleo](https://www.st.com/en/evaluation-tools/stm32-nucleo-boards.html) motherboards coupled with X-Nucleo expansion boards, and in particular the MEMS expansions (the latest is [X-Nucleo-IKS01A3](https://www.st.com/content/st_com/en/products/ecosystems/stm32-open-development-environment/stm32-nucleo-expansion-boards/stm32-ode-sense-hw/x-nucleo-iks01a3.html))
-- [AlgoBuilder GUI](https://www.st.com/content/st_com/en/products/embedded-software/mems-and-sensors-software/inemo-engine-software-libraries/algobuilder.html) software tool to design a custom processing flow and build the firmware for Nucleo boards coupled with the MEMS expansions, or for form-factor evaluation boards such as the [SensorTile.box](https://www.st.com/content/st_com/en/products/evaluation-tools/product-evaluation-tools/mems-motion-sensor-eval-boards/steval-mksbox1v1.html)
-- [X-CUBE-MEMS1](https://www.st.com/en/embedded-software/x-cube-mems1.html)
+For further example evaluation it is worth to mention following SW tools:
+- [**Unicleo GUI**](https://www.st.com/en/development-tools/unicleo-gui.html), a PC application that supports [STM32 Nucleo boards](https://www.st.com/en/evaluation-tools/stm32-nucleo-boards.html) boards coupled with STM32 Nucleo expansion boards (like the [X-Nucleo-IKS02A1](https://www.st.com/en/ecosystems/x-nucleo-iks02a1.html)) for data visoalization and demonstration of functionality of ST sensors and algorithms.
+- [**AlgoBuilder GUI**](https://www.st.com/content/st_com/en/products/embedded-software/mems-and-sensors-software/inemo-engine-software-libraries/algobuilder.html), a PC application to design a custom processing flow and build the firmware for STM32 Nucleo boards coupled with the MEMS expansions boards, or for form-factor evaluation boards such as the [SensorTile.box](https://www.st.com/en/evaluation-tools/steval-mksbox1v1.html) or the [STWIN](https://www.st.com/en/evaluation-tools/steval-stwinkt1b.html).
+- [**X-CUBE-MEMS1**](https://www.st.com/en/embedded-software/x-cube-mems1.html), an expansion software package for STM32 Nucleo boards that includes drivers, various sensor sample applications and advanced motion libraries.
 
 
 **Hardware:**
+
 This example is meant to be used with the [**IIS2ICLX**](https://www.st.com/en/mems-and-sensors/iis2iclx.html), dual-axis high-accuracy, high-resolution, low-power, digital inclinometer (accelerometer) with embedded Machine Learning Core (MLC). For the purpose of this example, one can use a DIL24 adapter board with the IIS2ICLX, called [**STEVAL-MKI209V1K**](https://www.st.com/en/evaluation-tools/steval-mki209v1k.html).
 
 ST provides many ways to evaluate the example. The two most common ways use the following boards:
 1. [**STEVAL-MKI109V3**](https://www.st.com/en/evaluation-tools/steval-mki109v3.html), or also known as **ProfiMEMSTool** motherboard, that is compatible with all ST MEMS sensors on a DIL24 adapter board. The board is supported by the **Unico-GUI** PC application and is used for sensor performance evaluation.
-2. One of our [**Nucleo boards**](https://www.st.com/en/evaluation-tools/stm32-nucleo-boards.html), for example the [**NUCLEO-F401RE**](https://www.st.com/en/evaluation-tools/nucleo-f401re.html), with a MEMS expansion board, e.g. the [**X-NUCLEO-IKS02A1**](https://www.st.com/en/ecosystems/x-nucleo-iks02a1.html). This set of boards is supported by the **X-CUBE-MEMS1 SW** package *(only selected Nucleo boards are supported)* and the results can be visualized in the **Unicleo-GUI**.
+2. One of our [**STM32 Nucleo boards**](https://www.st.com/en/evaluation-tools/stm32-nucleo-boards.html), for example the [**NUCLEO-F401RE**](https://www.st.com/en/evaluation-tools/nucleo-f401re.html), with a MEMS expansion board, e.g. the [**X-NUCLEO-IKS02A1**](https://www.st.com/en/ecosystems/x-nucleo-iks02a1.html). This set of boards is supported by the **X-CUBE-MEMS1 SW** package *(only selected Nucleo boards are supported)* and the results can be visualized in the **Unicleo-GUI**.
 
 For further details on the hardware:
 - ST resource page on [MEMS sensor](https://www.st.com/mems)
