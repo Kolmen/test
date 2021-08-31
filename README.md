@@ -1,5 +1,12 @@
 This README file describes how to build and use the **iis2iclx_tilt_angle_DT_generator.c** program to generate two decision trees for tilt sensing, how to create from the decision trees an UCF configuration file for the **Machine Learning Core (MLC)** of the [**IIS2ICLX**](https://www.st.com/en/mems-and-sensors/iis2iclx.html) and finally how to evaluate the result.
 
+This example explains the following:
+
+- How to build the *iis2iclx_tilt_angle_DT_generator.c* program
+- How to run the program to generate customized decision trees for inclination angle measurement
+- How to use the *Unico-GUI* to generate a sensor configuration file (*UCF* file) from the previously generated decision tree files
+- How to evaluate the results of this tutorial
+
 
 
 ## **Software:**
