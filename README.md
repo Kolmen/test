@@ -5,7 +5,7 @@ This tutorial describes the following:
 - How to build the *iis2iclx_tilt_angle_DT_generator.c* program
 - How to run the program to generate customized decision trees for inclination angle measurement
 - How to use the *Unico-GUI* to generate a sensor configuration file (*UCF* file) from the previously generated decision tree files
-- How to evaluate the results of this tutorial
+- How to use the *UCF file* and evaluate the MLC results
 
 
 
@@ -190,7 +190,7 @@ In summary, the following configuration has been set in this section:
 
 
 
-# 4. Evaluate the results
+# 4. Evaluate the MLC results
 
 There are many options to evaluate the results with ST tools. This section describes utilization of the **STEVAL-MKI209V1K** with the **ProfiMEMSTool** (*STEVAL-MKI109V3*) and with an **STM32 Nucleo** board and a **MEMS expansion** board.
 
