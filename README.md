@@ -210,6 +210,12 @@ The MLC output is displayed in the text field 1 and 2 in the Decision Tree resul
 
 The disadvantage of this way of evaulation is the fact, that it is not possible to directly convert the MLC output value into more understandable form. It is expressed as a 8-bit value in two’s complement that must be multiplied by **angular sensitivity** mentioned in the output of the *iis2iclx_tilt_angle_DT_generator.exe* program (default is 0.15748 deg/LSB).
 
+For example, the picture above shows value 36 in the text field 1 and 107 in text field 2. Considering the fact that the values are represented as two’s complement number, it is visible that both are positive numbers. They can be then easily converted to a value of the angle of inclination in degrees by multiplying them by the Angular sensitivity:
+
+```
+36 \* 0.15748 = 5.67 degrees
+107 \* 0.15748 = 16.85 degrees
+```
 
 
 ## 2. STM32 Nucleo
