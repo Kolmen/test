@@ -192,7 +192,7 @@ Go to *Load/Save* tab, click the *Load* button, browse for the generated UCF fil
  
 <img src="./images/load.png">
 
-The MLC output is displayed in the text field 1 and 2 in the Decision Tree results section of the window:
+The MLC output is displayed in the text field 1 and 2 in the Decision Tree results section of the *Data* window:
 
 <img src="./images/Unico_output.png">
 
