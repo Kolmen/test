@@ -213,7 +213,7 @@ As it was described in previous section, the Unico-GUI can generate a header fil
 
 The header file content is very simple: it contains a structure array with register addresses and corresponding values. The data structure is defined as:
  
-```
+```c
 /** Common data block definition **/
 typedef struct {
   uint8_t address;
@@ -223,7 +223,7 @@ typedef struct {
 
 And the array might look as follows:
 
-```
+```c
 /** Configuration array generated from Unico Tool **/
 const ucf_line_t tilt_sensing_DT[] = {
   {.address = 0x10, .data = 0x00,},
