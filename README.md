@@ -237,7 +237,7 @@ const ucf_line_t tilt_sensing_DT[] = {
 };
 ```
 
-Thus, for writing the whole sensor configuration (including the MLC part) to the sensor, it is necessary to run for example following code:
+Thus, configure the sensor (including the MLC part), it is necessary to read the whole array and write the defined values to the corresponding addresses. Below you can fine one of the possible ways to solve this task (pseudocode):
 
 ```
 int length = sizeof(tilt_sensing_DT)/sizeof(ucf_line_t); // get the length of the structure array
@@ -247,6 +247,8 @@ for (i = 0; i < length; i++)
   write(fsm_mlc_config[i].address, fsm_mlc_config[i].data); // write the defined value to the corresponding address 
 }
 ```
+
+
 
 ------
 
