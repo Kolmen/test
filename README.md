@@ -1,5 +1,7 @@
 This README file describes how to build and use the **iis2iclx_tilt_angle_DT_generator.c** program to generate two decision trees for tilt sensing, how to create from the decision trees an UCF configuration file for the **Machine Learning Core (MLC)** of the [**IIS2ICLX**](https://www.st.com/en/mems-and-sensors/iis2iclx.html) and finally how to evaluate the result.
 
+
+
 ## **Software:**
 
 The main and mandatory SW for this tutorial is the [**Unico-GUI**](https://www.st.com/en/development-tools/unico-gui.html), a graphical user interface (available for Linux, MacOS and Windows) that supports the **ProfiMEMSTool** motherboard and allows to build an **MLC** program (even without any board connected = offline mode) or to generate a sensor configuration file (**UCF** file).
@@ -13,6 +15,7 @@ To further evaluate the output of this tutorial, it is worth mentioning the foll
 - [**STM32CubeMX**](https://www.st.com/en/development-tools/stm32cubemx.html), a graphical tool (available for Linux, MacOS and Windows) that allows a very easy configuration of STM32 microcontrollers and microprocessors, as well as the generation of the corresponding initialization C code through a step-by-step process.
 
 
+
 ## **Hardware:**
 
 The [**IIS2ICLX**](https://www.st.com/en/mems-and-sensors/iis2iclx.html), the dual-axis high-accuracy digital inclinometer with embedded Machine Learning Core (MLC) will be used in this tutorial. In particular, the [**STEVAL-MKI209V1K**](https://www.st.com/en/evaluation-tools/steval-mki209v1k.html), a dedicated DIL24 adapter board for the IIS2ICLX is considered. Anyway, the same procedure shown in this tutorial also applies to other ST sensors with MLC support.
@@ -21,14 +24,14 @@ ST provides many evaluation boards for the ST MEMS sensors. In this case, the fo
 1. [**STEVAL-MKI109V3**](https://www.st.com/en/evaluation-tools/steval-mki109v3.html), or also known as **ProfiMEMSTool** motherboard, that is compatible with all ST MEMS sensors on a DIL24 adapter board. The board is supported by the **Unico-GUI** PC application and is used for sensor performance evaluation.
 2. One of our [**STM32 Nucleo boards**](https://www.st.com/en/evaluation-tools/stm32-nucleo-boards.html), for example the [**NUCLEO-F401RE**](https://www.st.com/en/evaluation-tools/nucleo-f401re.html), with a MEMS expansion board, e.g. the [**X-NUCLEO-IKS02A1**](https://www.st.com/en/ecosystems/x-nucleo-iks02a1.html). This set of boards is supported by the **X-CUBE-MEMS1** software package *(only selected Nucleo boards are supported)* and the results can be visualized in the **Unicleo-GUI**.
 
-For further details on the hardware:
+For more hardware details, visit:
 - ST resource page on [MEMS sensor](https://www.st.com/mems)
 - ST resource page on [Explore Machine Learning Core in MEMS sensors](https://www.st.com/content/st_com/en/campaigns/machine-learning-core.html)
 - Application note [AN5536](https://www.st.com/resource/en/application_note/an5536-iis2iclx-machine-learning-core-stmicroelectronics.pdf) on the Machine Learning Core embedded in the [IIS2ICLX](https://www.st.com/en/mems-and-sensors/iis2iclx.html)
 
 
-# 1. Build the C program
 
+# 1. Build the C program
 
 Download the **iis2iclx_tilt_angle_DT_generator.c** file to your PC. The program may be modified according to one's needs in a text editor. However, in many cases or for a basic evaluation, the program is sufficient without any modifications.
 
@@ -48,6 +51,8 @@ gcc iis2iclx_tilt_angle_DT_generator.c -o iis2iclx_tilt_angle_DT_generator
 ```
 
 The command creates an executable file in current folder (in this case *"iis2iclx_tilt_angle_DT_generator.exe"*).
+
+
 
 # 2. Generate decision trees with the built program
 After the program is built it is possible to run it simply by using the following command (it will use the default configuration):
