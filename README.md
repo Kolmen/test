@@ -203,12 +203,10 @@ Run the Unico-GUI and connect the ProfiMEMSTool with inserted STEVAL-MKI209V1K b
 Go to *Load/Save* tab, click the *Load* button, browse for the generated UCF file and then click the *Open* button. Wait until the file is ***Loaded***, click the *Start* button and open the *Data* window by clicking the *Data* button from the option panel on the left side.
 
 ![Load UCF file](./images/load.png)
-<img src="./images/load.png">
 
 The MLC output is displayed in the text field 1 and 2 in the Decision Tree results section of the *Data* window:
 
 ![Unico-GUI: Data window](./images/Unico_output.png)
-<img src="./images/Unico_output.png">
 
 The disadvantage of this way of evaulation is the fact, that it is not possible to directly convert the MLC output value into more understandable form. It is expressed as a 8-bit value in two’s complement that must be multiplied by **angular sensitivity** mentioned in the output of the *iis2iclx_tilt_angle_DT_generator.exe* program (default is 0.15748 deg/LSB).
 
