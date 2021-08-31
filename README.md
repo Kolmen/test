@@ -119,7 +119,6 @@ Go directly to the Configuration tab:
 
 <img src="./images/MLC_config.png">
 
-
 Select the **IIS2ICLX** and choose the required parameters of the **MLC** and sensor. The chosen configuration of the sensor and MLC Output Data Rate (**ODR**) for this tutorial is visible in the picture below:
 
 <img src="./images/MLC_config2.png">
@@ -128,13 +127,9 @@ Set up two decision trees from the list and continue configuring the MLC. To sup
 
 <img src="./images/lpf.png">
 
-
 Further examples of filter coefficients can be found in Table 3 in the [AN5536](https://www.st.com/resource/en/application_note/an5536-iis2iclx-machine-learning-core-stmicroelectronics.pdf).
 
-The configuration used for this tutorial is shown in the picture below:
-
 <img src="./images/end_filters.png">
-
 
 In the next step select only feature **Mean** for inputs **ACC_X** and **ACC_Y** (or only feature **Mean** for inputs "**filter IIR2 on ACC X**" and "**filter IIR2 on ACC Y**", if a IIR2 filter was used - as in this tutorial). In this tutorial, the Window lenth was set to 1, which means that the filtered acceleration output samples are no further proccessed.
 
