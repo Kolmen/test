@@ -185,7 +185,7 @@ In summary, the following configuration has been set in this section:
 
 # 4. Evaluate the results
 
-There are many options to evaluate the results with ST tools. This section describes utilization of the **STEVAL-MKI209V1K** with the **ProfiMEMSTool** (*STEVAL-MKI109V3*) and with the STM32 Nucleo board and MEMS expansion board.
+There are many options to evaluate the results with ST tools. This section describes utilization of the **STEVAL-MKI209V1K** with the **ProfiMEMSTool** (*STEVAL-MKI109V3*) and with an **STM32 Nucleo** board and a **MEMS expansion** board.
 
 ## 1. ProfiMEMSTool
 
@@ -207,13 +207,12 @@ The disadvantage of this way of evaulation is the fact, that it is not possible 
 
 ## 2. STM32 Nucleo
 
-This option requires a C project that handles the communication between the STM32 MCU and the **IIS2ICLX**. This task could be quite easily done in the STM32CubeMX, the initialization C code generator for STM32 microcontrollers and microprocessors.
+This option requires a C project that handles the communication between the STM32 MCU and the **IIS2ICLX**. For example, the **NUCLEO-F401RE** with the **X-NUCLEO-IKS02A1** may be used. This task could be quite easily done in the STM32CubeMX, the initialization C code generator for STM32 microcontrollers and microprocessors.
 
-As it was described in previous section, the Unico-GUI can generate a header file (*.h*) from the generated *UCF* file. The header file would be used in this case.
+As it was described in previous section, the Unico-GUI can generate a header file (*.h*) from the generated *UCF* file. It is beneficial to use the header file in this case.
 
-The data format in the header file is very simple. There is a structure array containing register addresses and corresponding values.
+The header file content is very simple: it contains a structure array with register addresses and corresponding values. The data structure is defined as:
  
-
 ```
 /** Common data block definition **/
 typedef struct {
@@ -222,7 +221,32 @@ typedef struct {
 } ucf_line_t;
 ```
 
+And the array might look as follows:
 
+```
+/** Configuration array generated from Unico Tool **/
+const ucf_line_t tilt_sensing_DT[] = {
+  {.address = 0x10, .data = 0x00,},
+  {.address = 0x11, .data = 0x00,},
+  {.address = 0x01, .data = 0x80,},
+  {.address = 0x05, .data = 0x00,},
+  {.address = 0x17, .data = 0x40,},
+  ...
+  {.address = 0x0D, .data = 0x01,},
+  {.address = 0x01, .data = 0x00,}
+};
+```
+
+Thus, for writing the whole sensor configuration (including the MLC part) to the sensor, it is necessary to run for example following code:
+
+```
+int length = sizeof(tilt_sensing_DT)/sizeof(ucf_line_t); // get the length of the structure array
+
+for (i = 0; i < length; i++)
+{
+  write(fsm_mlc_config[i].address, fsm_mlc_config[i].data); // write the defined value to the corresponding address 
+}
+```
 
 ------
 
