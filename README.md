@@ -95,7 +95,7 @@ iis2iclx_tilt_angle_DT_generator.exe -h
 ```
 iis2iclx_tilt_angle_DT_generator.exe -a 25 -o my_folder
 ```
-The parameters are configured as follows:
+The parameters will be then configured as:
 
 **Angle range** = +/- 25 degrees
 
