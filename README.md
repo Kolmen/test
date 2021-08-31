@@ -237,7 +237,7 @@ const ucf_line_t tilt_sensing_DT[] = {
 };
 ```
 
-Thus, configure the sensor (including the MLC part), it is necessary to read the whole array and write the defined values to the corresponding addresses. Below is a pseudocode that solves this task:
+Thus, to configure the sensor (including the MLC part) it is necessary to read the whole array and write the defined values to the corresponding addresses. Below is a pseudocode that solves this task:
 
 ```c
 int length = sizeof(tilt_sensing_DT)/sizeof(ucf_line_t); // get the length of the structure array
@@ -248,7 +248,21 @@ for (i = 0; i < length; i++)
 }
 ```
 
+After the sensor is configured, it is then only necessary to check the sensor interrupt line, where the MLC interrupt status signal is enabled ( **INT1** by default). If an interrupt is triggered, it means that the decision tree result, i.e. the inclination angle, was changed (in any of the two axes) and the updated result value is available in the decision tree output registers (**MLC0_SRC (70h)** and **MLC1_SRC (71h)**).
 
+In other words, the following pseudocode can be used to read the MLC output value:
+
+```c
+uint8_t x_axis, y_axis;
+
+if(INT_received)
+{
+  write(0x01, 0x80); // set the FUNC_CFG_ACCESS bit in the FUNC_CFG_ACCESS register to 1 - to enable access to embedded functions registers
+  read(0x70, &x_axis); // read the content of the MLC0_SRC register and store the value to variable x_axis
+  read(0x71, &y_axis); // read the content of the MLC0_SRC register and store the value to variable x_axis
+  write(0x01, 0x00); // set the FUNC_CFG_ACCESS bit in the FUNC_CFG_ACCESS register to 0 - to disable access to embedded functions registers
+}
+```
 
 ------
 
