@@ -84,6 +84,13 @@ The following program parameters can be configured from the Windows Command Prom
 
 The program supports the following options:
 
+| Option | Description |
+| --- | --- |
+| `-a` | Set the *Angle range* |
+| `-o` | Set the *Output folder name* |
+| `-h` | Display *help* message |
+
+
 `-a`	Set the Angle range
 
 `-o`	Set the Output folder name
