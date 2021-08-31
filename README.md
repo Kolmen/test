@@ -231,7 +231,9 @@ const ucf_line_t tilt_sensing_DT[] = {
   {.address = 0x01, .data = 0x80,},
   {.address = 0x05, .data = 0x00,},
   {.address = 0x17, .data = 0x40,},
-  ...
+  .
+  .
+  .
   {.address = 0x0D, .data = 0x01,},
   {.address = 0x01, .data = 0x00,}
 };
@@ -268,6 +270,9 @@ Finally, the conversion from the raw data to a inclination angle value in degree
 
 ```c
 #define ANGULAR_SENSITIVITY (0.15748f)
+.
+.
+.
 
 float angle_x, angle_y;
 
