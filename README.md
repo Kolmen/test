@@ -35,7 +35,7 @@ For more hardware details, visit:
 
 Download the **iis2iclx_tilt_angle_DT_generator.c** file to your PC. The program may be modified according to one's needs in a text editor. However, in many cases or for a basic evaluation, the program is sufficient without any modifications.
 
-Open the Windows Command Prompt (e.g. press Win+R, type cmd and press Enter key) and go to the folder, where the **iis2iclx_tilt_angle_DT_generator.c** is located. For instance, if the file is located in *"C:\tilt_angle_dual_plan\angle_customization_script"*, then you can use the following command:
+Open the Windows Command Prompt (e.g. press Win+R, type cmd and press Enter key) and go to the folder, where the *iis2iclx_tilt_angle_DT_generator.c* is located. For instance, if the file is located in *"C:\tilt_angle_dual_plan\angle_customization_script"*, then you can use the following command:
 ```
 cd C:\tilt_angle_dual_plan\angle_customization_script
 ```
@@ -45,12 +45,12 @@ The correct location can be verified by writing command `dir` or `ls` as shown i
 <img src="./images/prog_loc.png"/>
 
 
-Write the command to build the **iis2iclx_tilt_angle_DT_generator.c**:
+Execute the following command to build the **iis2iclx_tilt_angle_DT_generator.c**:
 ```
 gcc iis2iclx_tilt_angle_DT_generator.c -o iis2iclx_tilt_angle_DT_generator
 ```
 
-The command creates an executable file in current folder (in this case *"iis2iclx_tilt_angle_DT_generator.exe"*).
+The command creates an executable file in current folder (in this case "**iis2iclx_tilt_angle_DT_generator.exe**").
 
 
 
