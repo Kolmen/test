@@ -55,7 +55,7 @@ The command creates an executable file in current folder (in this case "**iis2ic
 
 
 # 2. Generate decision trees with the built program
-After the program is built it is possible to run it simply by using the following command (it will use the default configuration):
+After building the program, you can run it simply with the following command (the default parameter settings will be used):
 ```
 iis2iclx_tilt_angle_DT_generator.exe
 ```
