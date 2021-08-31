@@ -207,11 +207,13 @@ The disadvantage of this way of evaulation is the fact, that it is not possible 
 
 ## 2. STM32 Nucleo
 
-This option requires a C project that handles the communication between the STM32 MCU and the **IIS2ICLX**. For example, the **NUCLEO-F401RE** with the **X-NUCLEO-IKS02A1** may be used. This task could be quite easily done in the STM32CubeMX, the initialization C code generator for STM32 microcontrollers and microprocessors.
+This option requires a C project that handles the communication between the STM32 MCU and the **IIS2ICLX**. This task could be quite easily done in the STM32CubeMX, the initialization C code generator for STM32 microcontrollers and microprocessors.
 
-As it was described in previous section, the Unico-GUI can generate a header file (*.h*) from the generated *UCF* file. It is beneficial to use the header file in this case.
+For example, when the **NUCLEO-F401RE** with the **X-NUCLEO-IKS02A1** is used, one can connect the NUCLEO-F401RE to X-NUCLEO-IKS02A1 by using the Arduino connector and then connect the STEVAL-MKI209V1K (DIL24 adapter board) to the X-NUCLEO-IKS02A1 by using its DIL24 socket.
 
-The header file content is very simple: it contains a structure array with register addresses and corresponding values. The data structure is defined as:
+As described in the previous section, the Unico-GUI can generate a header file (*.h*) from the generated *UCF* file. In this case, it is advantageous to use it.
+
+The header file content is very simple: it contains an array of structures with register addresses and corresponding values. The data structure is defined as:
  
 ```c
 /** Common data block definition **/
@@ -221,7 +223,7 @@ typedef struct {
 } ucf_line_t;
 ```
 
-And the array might look as follows:
+The whole array might look as follows:
 
 ```c
 /** Configuration array generated from Unico Tool **/
@@ -239,7 +241,7 @@ const ucf_line_t tilt_sensing_DT[] = {
 };
 ```
 
-Thus, to configure the sensor (including the MLC part) it is necessary to read the whole array and write the defined values to the corresponding addresses. Below is a pseudocode that solves this task:
+To configure the sensor (including the MLC part), it is therefore necessary to read the entire array and write the defined values to the corresponding addresses. Below is the pseudocode that solves this task:
 
 ```c
 int length = sizeof(tilt_sensing_DT)/sizeof(ucf_line_t); // get the length of the structure array
@@ -250,9 +252,9 @@ for (i = 0; i < length; i++)
 }
 ```
 
-After the sensor is configured, it is then only necessary to check the sensor interrupt line, where the MLC interrupt status signal is enabled ( **INT1** by default). If an interrupt is triggered, it means that the decision tree result, i.e. the inclination angle, was changed (in any of the two axes) and the updated result value is available in the decision tree output registers (**MLC0_SRC (70h)** and **MLC1_SRC (71h)**).
+After the sensor is configured, it is only necessary to check the sensor interrupt line on which the MLC interrupt status signal is enabled ( **INT1** by default). If an interrupt is triggered, it means that the result of the decision tree, i.e. the angle of inclination, has been changed (in either of the two sensor axes) and the updated value of the result is available in the output register of the decision trees (**MLC0_SRC (70h)** and **MLC1_SRC (71h)**).
 
-In other words, the following pseudocode can be used to read the MLC output value:
+The following pseudocode can be used to read the MLC output value:
 
 ```c
 uint8_t x_axis, y_axis;
@@ -266,7 +268,7 @@ if(INT_received)
 }
 ```
 
-Finally, the conversion from the raw data to a inclination angle value in degrees could be done using the following pseudocode:
+Finally, the conversion from raw data to the value of the angle of inclination in degrees can be performed using the following pseudocode:
 
 ```c
 #define ANGULAR_SENSITIVITY (0.15748f)
