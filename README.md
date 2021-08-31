@@ -185,7 +185,9 @@ In summary, the following configuration has been set in this section:
 
 # 4. Evaluate the results
 
-## ProfiMEMSTool
+There are many options to evaluate the results with ST tools. This section describes utilization of the **STEVAL-MKI209V1K** with the **ProfiMEMSTool** (*STEVAL-MKI109V3*) and with the STM32 Nucleo board and MEMS expansion board.
+
+## 1. ProfiMEMSTool
 
 The easiest way to evaluate the results is using the **ProfiMEMSTool** with the **STEVAL-MKI209V1K** and the **Unico-GUI**.
 
@@ -203,7 +205,7 @@ The disadvantage of this way of evaulation is the fact, that it is not possible 
 
 
 
-## STM32Nucleo
+## 2. STM32 Nucleo
 
 This option requires a C project that handles the communication between the STM32 MCU and the **IIS2ICLX**. This task could be quite easily done in the STM32CubeMX, the initialization C code generator for STM32 microcontrollers and microprocessors.
 
