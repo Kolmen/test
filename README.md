@@ -124,7 +124,7 @@ Select the **IIS2ICLX** and choose the required parameters of the **MLC** and se
 
 <img src="./images/MLC_config2.png">
 
-Set two decision trees from the list and continue configuring the MLC. To suppress high frequency components of the signal, the IIR2 filter was configured as a low-pass filter (f_cut = 5 Hz, ODR = 26 Hz) with the following filter coefficients:
+Set up two decision trees from the list and continue configuring the MLC. To suppress high frequency components of the signal, the IIR2 filter was configured as a low-pass filter (f_cut = 5 Hz, ODR = 26 Hz) with the following filter coefficients:
 
 <img src="./images/lpf.png">
 
