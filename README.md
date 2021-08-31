@@ -86,12 +86,12 @@ The program supports the following options:
 
 **Example usages:**
 
-1. Following command only prints help of the program:
+1. The following command prints only the program help:
 ```
 iis2iclx_tilt_angle_DT_generator.exe -h
 ```
 
-2. Following command executes the program with modified parameters:
+2. The following command executes the program with the modified parameters::
 ```
 iis2iclx_tilt_angle_DT_generator.exe -a 25 -o my_folder
 ```
