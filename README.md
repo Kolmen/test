@@ -264,6 +264,19 @@ if(INT_received)
 }
 ```
 
+Finally, the conversion from the raw data to a inclination angle value in degrees could be done using the following pseudocode:
+
+```c
+#define ANGULAR_SENSITIVITY (0.15748f)
+
+float angle_x, angle_y;
+
+angle_x = x_axis * ANGULAR_SENSITIVITY;
+angle_y = y_axis * ANGULAR_SENSITIVITY;
+
+```
+
+
 ------
 
 **Copyright © 2021 STMicroelectronics**
