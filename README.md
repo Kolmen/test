@@ -155,7 +155,7 @@ Moreover, the **UCF files can also be converted into a C source code** and saved
 conveniently included in C projects. It can be done from main window of the Unico-GUI: click on the *Options tab*, select *Browse* and load the UCF file and then click on *Generate C code*.
 
 
-As summary, the following configuration was set:
+In summary, the following configuration has been set in this section:
 
 - Device: `IIS2ICLX`
 - Machine Learning Core ODR: `26 Hz`
