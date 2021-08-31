@@ -131,14 +131,15 @@ Further examples of filter coefficients can be found in Table 3 in the [AN5536](
 
 <img src="./images/end_filters.png">
 
-In the next step select only feature **Mean** for inputs **ACC_X** and **ACC_Y** (or only feature **Mean** for inputs "**filter IIR2 on ACC X**" and "**filter IIR2 on ACC Y**", if a IIR2 filter was used - as in this tutorial). In this tutorial, the Window lenth was set to 1, which means that the filtered acceleration output samples are no further proccessed.
+In the next step select only the **Mean** feature for the **ACC_X** and **ACC_Y** inputs (or only the **Mean** feature for the "**filter IIR2 on ACC X**" and "**filter IIR2 on ACC Y**" inputs if the IIR2 filter was used - as in this tutorial). In this tutorial, the Window lenth was set to 1, which means that the filtered output acceleration samples are no further proccessed.
 
+The next few steps will use the output of the *iis2iclx_tilt_angle_DT_generator.exe* program that was printed on the Command Prompt. Unico-GUI will ask to "*Insert the attribute name used in the decision tree file for the feature 1*". Copy/paste the appropriate text from the Command Prompt into the Unico-GUI. The same procedure should be repeated for the feature 2. In this tutorial, the attribute name for feature 1 is "*mean_x*" and for feature 2 "*mean_y*" (text between the quotation marks). 
 
-In the next few steps, the output of the *iis2iclx_tilt_angle_DT_generator.exe* program in the Command Prompt will be used. Unico-GUI will ask to "Insert the attribute name used in the decision tree file for the feature 1". Copy/paste the appropriate text from the Command Prompt into the Unico-GUI. The similar should be done for feature 2. In this tutorial, the attribute name for feature 1 is "*mean_x*" and for feature 2 "*mean_y*" (text between the quotation marks). Very similar procedure must be done for the Decision Tree #1/2 Results. The difference is, that one has to copy and paste to the Unico-GUI the whole string between the dashes "*---*" strings. See below the settings of the described steps that were done for this tutorial:
+The same must be done for the Decision Tree #1 and #2 Results. The difference is that the whole string between the three dashes ("*---*") must be copied / pasted into the Unico-GUI. See below the settings of the described steps done for this tutorial:
 
 <img src="./images/copypaste.png">
 
-Then browse for the created two text files with the decision tree. The default location is "*./dec_tree*" with respect to the directory, where the program was run. 
+Then browse for the created two text files that contain the decision tree. The default location is "*./dec_tree*" with respect to the directory, where the program was run. 
 
 The meta-classifier is not necessary for the purpose of this tutorial, so it was left at 0 in both cases (decision tree #1 and decision tree #2).
 
