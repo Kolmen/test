@@ -40,7 +40,7 @@ Open the Windows Command Prompt (e.g. press Win+R, type cmd and press Enter key)
 cd C:\tilt_angle_dual_plan\angle_customization_script
 ```
 
-The correct location can be verified by writing command `dir` or `ls` as visible below:
+The correct location can be verified by writing command `dir` or `ls` as shown in the picture below (the *iis2iclx_tilt_angle_DT_generator.c* must be listed):
 
 <img src="./images/prog_loc.png"/>
 
