@@ -97,9 +97,9 @@ iis2iclx_tilt_angle_DT_generator.exe -a 25 -o my_folder
 ```
 The parameters will be then configured as:
 
-**Angle range** = +/- 25 degrees
+**Angle range** = *+/- 25 degrees*
 
-**Folder name** = "my_folder"
+**Folder name** = "*my_folder*"
 
 
 
