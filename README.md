@@ -20,7 +20,7 @@ To further evaluate the output of this tutorial, it is worth mentioning the foll
 
 The [**IIS2ICLX**](https://www.st.com/en/mems-and-sensors/iis2iclx.html), the dual-axis high-accuracy digital inclinometer with embedded Machine Learning Core (MLC) will be used in this tutorial. In particular, the [**STEVAL-MKI209V1K**](https://www.st.com/en/evaluation-tools/steval-mki209v1k.html), a dedicated DIL24 adapter board for the IIS2ICLX is considered. Anyway, the same procedure shown in this tutorial also applies to other ST sensors with MLC support.
 
-ST provides many evaluation boards for the ST MEMS sensors. In this case, the following boards are selected:
+ST provides many evaluation boards for the ST MEMS sensors. In this case, the following boards are selected, from which you can select one (utilization of both boards is described in the last section):
 1. [**STEVAL-MKI109V3**](https://www.st.com/en/evaluation-tools/steval-mki109v3.html), or also known as **ProfiMEMSTool** motherboard, that is compatible with all ST MEMS sensors on a DIL24 adapter board. The board is supported by the **Unico-GUI** PC application and is used for sensor performance evaluation.
 2. One of our [**STM32 Nucleo boards**](https://www.st.com/en/evaluation-tools/stm32-nucleo-boards.html), for example the [**NUCLEO-F401RE**](https://www.st.com/en/evaluation-tools/nucleo-f401re.html), with a MEMS expansion board, e.g. the [**X-NUCLEO-IKS02A1**](https://www.st.com/en/ecosystems/x-nucleo-iks02a1.html). This set of boards is supported by the **X-CUBE-MEMS1** software package *(only selected Nucleo boards are supported)* and the results can be visualized in the **Unicleo-GUI**.
 
@@ -63,7 +63,7 @@ iis2iclx_tilt_angle_DT_generator.exe
 
 This program creates two text files (in "*./dec_tree*" folder), each of which contains a decision tree (one for the x axis and one for y axis of the accelerometer) in the format required by Unico to generate the MLC. Each decision tree contains 255 acceleration threshold levels to be detected, symmetrically spaced around zero in the specified angular range (default is +/- 20 degrees). The acceleration threshold levels correspond to the respective angles of inclination.
 
-*Please note that typical sensor errors (such as zero shift g, sensitivity error, etc.) are not taken into account in this tutorial. If a more accurate measurement is required, a calibration must be performed and then projected into the calculated threshold levels (then a program adjustment is required).*
+*Please note that typical sensor errors (such as zero-g offset, sensitivity error, etc.) are not taken into account in this tutorial. If a more accurate measurement is required, a calibration must be performed and then projected into the calculated threshold levels (then a program adjustment is required).*
 
 The program also displays useful information in the Command Prompt, which is then needed to generate the * UCF * file (described in the following section).
 
@@ -123,7 +123,7 @@ Select the **IIS2ICLX** and choose the required parameters of the **MLC** and se
 
 <img src="./images/MLC_config2.png">
 
-Set up two decision trees from the list and continue configuring the MLC. To suppress high frequency components of the signal, the IIR2 filter was configured as a low-pass filter (f_cut = 5 Hz, ODR = 26 Hz) with the following filter coefficients:
+Select two decision trees from the list and continue configuring the MLC. To suppress high frequency components of the signal, the IIR2 filter was configured as a low-pass filter (f_cut = 5 Hz, ODR = 26 Hz) with the following filter coefficients:
 
 <img src="./images/lpf.png">
 
@@ -184,7 +184,10 @@ In summary, the following configuration has been set in this section:
 
 
 # 4. Evaluate the results
-The easiest way to evaluate the results is using the **ProfiMEMSTool** with the **STEVAL-MKI209V1K** and **Unico-GUI**.
+
+## ProfiMEMSTool
+
+The easiest way to evaluate the results is using the **ProfiMEMSTool** with the **STEVAL-MKI209V1K** and the **Unico-GUI**.
 
 Run the Unico-GUI and connect the ProfiMEMSTool with inserted STEVAL-MKI209V1K board to the PC by using a micro USB cable. Select the IIS2ICLX from the list of Device Names, keep the *"Communication with the motherboard [Enabled]"* option box checked and click the *Select Device* button.
 
@@ -197,6 +200,25 @@ The MLC output is displayed in the text field 1 and 2 in the Decision Tree resul
 <img src="./images/Unico_output.png">
 
 The disadvantage of this way of evaulation is the fact, that it is not possible to directly convert the MLC output value into more understandable form. It is expressed as a 8-bit value in two’s complement that must be multiplied by **angular sensitivity** mentioned in the output of the *iis2iclx_tilt_angle_DT_generator.exe* program (default is 0.15748 deg/LSB).
+
+
+
+## STM32Nucleo
+
+This option requires a C project that handles the communication between the STM32 MCU and the **IIS2ICLX**. This task could be quite easily done in the STM32CubeMX, the initialization C code generator for STM32 microcontrollers and microprocessors.
+
+As it was described in previous section, the Unico-GUI can generate a header file (*.h*) from the generated *UCF* file. The header file would be used in this case.
+
+The data format in the header file is very simple. There is a structure array containing register addresses and corresponding values.
+ 
+
+```
+/** Common data block definition **/
+typedef struct {
+  uint8_t address;
+  uint8_t data;
+} ucf_line_t;
+```
 
 
 
