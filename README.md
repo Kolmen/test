@@ -213,8 +213,8 @@ The disadvantage of this way of evaulation is the fact, that it is not possible 
 For example, the picture above shows value 36 in the text field 1 and 107 in text field 2. Considering the fact that the values are represented as two’s complement number, it is visible that both are positive numbers. They can be then easily converted to a value of the angle of inclination in degrees by multiplying them by the Angular sensitivity:
 
 ```
-36 \* 0.15748 = 5.67 degrees
-107 \* 0.15748 = 16.85 degrees
+36 * 0.15748 = 5.67 degrees
+107 * 0.15748 = 16.85 degrees
 ```
 
 
@@ -276,7 +276,7 @@ if(INT_received)
 {
   write(0x01, 0x80); // set the FUNC_CFG_ACCESS bit in the FUNC_CFG_ACCESS register to 1 - to enable access to embedded functions registers
   read(0x70, &x_axis); // read the content of the MLC0_SRC register and store the value to variable x_axis
-  read(0x71, &y_axis); // read the content of the MLC0_SRC register and store the value to variable x_axis
+  read(0x71, &y_axis); // read the content of the MLC1_SRC register and store the value to variable y_axis
   write(0x01, 0x00); // set the FUNC_CFG_ACCESS bit in the FUNC_CFG_ACCESS register to 0 - to disable access to embedded functions registers
 }
 ```
