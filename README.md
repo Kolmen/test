@@ -62,7 +62,6 @@ This program creates two text files (in *"./dec_tree"* folder), each of which co
 
 The program also displays useful information in the Command Prompt, that is then needed for the *UCF* file generation (it is described in the following section).
 
-<img src="./images/prog_run.png"/>
 ![Run the program](/images/prog_run.png)
 
 
@@ -166,7 +165,6 @@ Go to *Load/Save* tab, click on Load, browse for the generated UCF file and clic
 
 The MLC output is visible in the Decision Tree results section of the window:
 
-<img src="./images/Unico_output.png">
 ![Unico output](/images/Unico_output.png)
 
 The disadvantage of this way of evaulation is the fact, that it is not possible to convert the MLC output value into more understandable form - it is expressed as a 8-bit value in two’s complement that must be multiplied by **angular sensitivity** mentioned in the output of the *iis2iclx_tilt_angle_DT_generator.exe* program (default is 0.15748 deg/LSB).
