@@ -15,9 +15,9 @@ To further evaluate the output of this tutorial, it is worth mentioning the foll
 
 ## **Hardware:**
 
-In this tutorial we will be using the [**IIS2ICLX**](https://www.st.com/en/mems-and-sensors/iis2iclx.html), the dual-axis high-accuracy digital inclinometer with embedded Machine Learning Core (MLC). For the purpose of this tutorial it is also possible to use the [**STEVAL-MKI209V1K**](https://www.st.com/en/evaluation-tools/steval-mki209v1k.html), a dedicated DIL24 adapter board for the IIS2ICLX. The same procedure shown in this tutorial also applies to other ST sensors with MLC support.
+The [**IIS2ICLX**](https://www.st.com/en/mems-and-sensors/iis2iclx.html), the dual-axis high-accuracy digital inclinometer with embedded Machine Learning Core (MLC) will be used in this tutorial. In particular, the [**STEVAL-MKI209V1K**](https://www.st.com/en/evaluation-tools/steval-mki209v1k.html), a dedicated DIL24 adapter board for the IIS2ICLX is considered. Anyway, the same procedure shown in this tutorial also applies to other ST sensors with MLC support.
 
-ST provides many ways to evaluate the ST MEMS sensors in general. In this tutorial, it is possible to use e.g. the following boards :
+ST provides many evaluation boards for the ST MEMS sensors. In this case, the following boards are selected:
 1. [**STEVAL-MKI109V3**](https://www.st.com/en/evaluation-tools/steval-mki109v3.html), or also known as **ProfiMEMSTool** motherboard, that is compatible with all ST MEMS sensors on a DIL24 adapter board. The board is supported by the **Unico-GUI** PC application and is used for sensor performance evaluation.
 2. One of our [**STM32 Nucleo boards**](https://www.st.com/en/evaluation-tools/stm32-nucleo-boards.html), for example the [**NUCLEO-F401RE**](https://www.st.com/en/evaluation-tools/nucleo-f401re.html), with a MEMS expansion board, e.g. the [**X-NUCLEO-IKS02A1**](https://www.st.com/en/ecosystems/x-nucleo-iks02a1.html). This set of boards is supported by the **X-CUBE-MEMS1** software package *(only selected Nucleo boards are supported)* and the results can be visualized in the **Unicleo-GUI**.
 
