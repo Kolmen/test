@@ -63,11 +63,11 @@ This program creates two text files (in *"./dec_tree"* folder), each of which co
 
 *Please note that typical sensor errors (such as zero shift g, sensitivity error, etc.) are not taken into account in this tutorial. If a more accurate measurement is required, a calibration must be performed and then projected into the calculated threshold levels (then a program adjustment is required).*
 
-The program also displays useful information in the Command Prompt, that is then needed for the *UCF* file generation (it is described in the following section).
+The program also displays useful information in the Command Prompt, which is then needed to generate the * UCF * file (described in the following section).
 
 <img src="./images/prog_run.png"/>
 
-It is possible to configure following parameters of the program from the Windows Command Prompt:
+The following program parameters can be configured from the Windows Command Prompt:
 
 - **Angle range** *(default: +/- 20 degrees)*. It must be an integer in range from 2 to 90 [deg]. The final angle range is symmetrical around zero.
 - **Output folder name**, where two text files with the decision trees should be stored *(default: "dec_tree")*. The folder will be created in the same folder where the program is run and its name can't contain any of the following characters: `\/:*?\"<>|`.
