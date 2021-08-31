@@ -239,7 +239,7 @@ const ucf_line_t tilt_sensing_DT[] = {
 
 Thus, configure the sensor (including the MLC part), it is necessary to read the whole array and write the defined values to the corresponding addresses. Below is a pseudocode that solves this task:
 
-```
+```clike
 int length = sizeof(tilt_sensing_DT)/sizeof(ucf_line_t); // get the length of the structure array
 
 for (i = 0; i < length; i++)
