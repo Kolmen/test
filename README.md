@@ -44,7 +44,6 @@ The correct location can be verified by writing command `dir` or `ls` as shown i
 
 <img src="./images/prog_loc.png"/>
 
-
 Execute the following command to build the **iis2iclx_tilt_angle_DT_generator.c**:
 ```
 gcc iis2iclx_tilt_angle_DT_generator.c -o iis2iclx_tilt_angle_DT_generator
@@ -62,12 +61,11 @@ iis2iclx_tilt_angle_DT_generator.exe
 
 This program creates two text files (in *"./dec_tree"* folder), each of which contains a decision tree (one for the x axis and one for y axis of the accelerometer) in the format required by Unico to generate the MLC. Each decision tree contains 255 acceleration threshold levels to be detected, symmetrically spaced around zero in the specified angular range (default is +/- 20 degrees). The acceleration threshold levels correspond to the respective angles of inclination.
 
-*Please note, that typical sensor errors (like zero-g offset, sensitivity error, etc.) are not considered in this tutorial. If more accurate measurement is required, the calibration must be performed and then projected into the calculated threshold levels (modification of the program is then needed).*
+*Please note that typical sensor errors (such as zero shift g, sensitivity error, etc.) are not taken into account in this tutorial. If a more accurate measurement is required, a calibration must be performed and then projected into the calculated threshold levels (then a program adjustment is required).*
 
 The program also displays useful information in the Command Prompt, that is then needed for the *UCF* file generation (it is described in the following section).
 
 <img src="./images/prog_run.png"/>
-
 
 It is possible to configure following parameters of the program from the Windows Command Prompt:
 
