@@ -186,7 +186,7 @@ In summary, the following configuration has been set in this section:
 # 4. Use the MLC configuration file
 The easiest way to evaluate the results is using the **ProfiMEMSTool** with the **STEVAL-MKI209V1K** and **Unico-GUI**.
 
-Run the Unico-GUI and connect the ProfiMEMSTool with inserted STEVAL-MKI209V1K board to the PC by using a micro USB cable. Select the IIS2ICLX from the list of Device Names, keep the *"Communication with the motherboard [Enabled]"* option checked and click on *Select Device*.
+Run the Unico-GUI and connect the ProfiMEMSTool with inserted STEVAL-MKI209V1K board to the PC by using a micro USB cable. Select the IIS2ICLX from the list of Device Names, keep the *"Communication with the motherboard [Enabled]"* option box checked and click the *Select Device* button.
 
 Go to *Load/Save* tab, click on Load, browse for the generated UCF file and click the *Open* button. Wait until the file is **_Loaded_**, click the *Start* button and open the Data window.
  
