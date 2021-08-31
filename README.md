@@ -51,6 +51,8 @@ cd C:\tilt_angle_dual_plan\angle_customization_script
 
 The correct location can be verified by writing command `dir` or `ls` as shown in the picture below (the *iis2iclx_tilt_angle_DT_generator.c* must be listed):
 
+![Verifying the current location](./images/prog_loc.png)
+
 <img src="./images/prog_loc.png"/>
 
 Execute the following command to build the **iis2iclx_tilt_angle_DT_generator.c**:
