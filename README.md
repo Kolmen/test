@@ -72,7 +72,7 @@ This program creates two text files (in "*./dec_tree*" folder), each of which co
 
 *Please note that typical sensor errors (such as zero-g offset, sensitivity error, etc.) are not taken into account in this tutorial. If a more accurate measurement is required, a calibration must be performed and then projected into the calculated threshold levels (then a program adjustment is required).*
 
-The program also displays useful information in the Command Prompt, which is then needed to generate the * UCF * file (described in the following section).
+The program also displays useful information in the Command Prompt, which is then needed to generate the *UCF* file (described in the following section).
 
 ![Program output](./images/prog_run.png)
 
