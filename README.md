@@ -175,8 +175,8 @@ In summary, the following configuration has been set in this section:
 	- `b1 = 0.194261, b2 = 0.388522, b3 = 0.194261, a2 = -0.426937, a3 = 0.203981` (Low-pass IIR2, f_cut = 5 Hz, ODR = 26 Hz, Gain = 1)
 - No other filter was used (*End filters configuration*)
 - Features:
-	- Mean on filtered data of X axis ("*F1_MEAN_on_filter IIR2 on ACC X*") and Mean on filtered data of X axis ("*F2_MEAN_on_filter IIR2 on ACC Y*")
-	- (if no filters are used: Mean on accelerometer X axis ("*F1_MEAN_on_ACC_X*") and Mean on accelerometer Y axis ("*F2_MEAN_on_ACC_Y*") should be used instead)
+	- Mean on filtered data of X axis (`F1_MEAN_on_filter IIR2 on ACC X`) and Mean on filtered data of X axis (`F2_MEAN_on_filter IIR2 on ACC Y`)
+	- (Note: if no filters were selected, use Mean on accelerometer X axis (`F1_MEAN_on_ACC_X`) and Mean on accelerometer Y axis (`F2_MEAN_on_ACC_Y`) instead)
 - Decision Tree Attributes:
 	- Attribute name, feature 1: `mean_x`
 	- Attribute name, feature 2: `mean_y`
