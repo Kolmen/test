@@ -249,7 +249,7 @@ const ucf_line_t tilt_sensing_DT[] = {
   .
   .
   .
-  {.address = 0x0D, .data = 0x01,},
+  {.address = 0x0D, .data = 0x03,},
   {.address = 0x01, .data = 0x00,}
 };
 ```
