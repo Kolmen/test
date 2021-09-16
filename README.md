@@ -15,7 +15,7 @@ The main and mandatory SW for this tutorial is the [**Unico-GUI**](https://www.s
 
 For the tutorial it is also necessary to install a C compiler. This tutorial describes the procedure of compilation with the GCC compiler on Windows (using [**Cygwin**](https://www.cygwin.com/)). Please note, that Cygwin *bin* directory (typically "*C:\cygwin64\bin*") should be added to the Windows PATH environment variable. Sucessfull GCC installation can be checked by writing `gcc -v` command in the Windows Command prompt (it should display the GCC configuration and its version).
 
-To further evaluate the output of this tutorial, it is worth mentioning the following software tools::
+To further evaluate the output of this tutorial, it is worth mentioning the following software tools:
 - [**Unicleo-GUI**](https://www.st.com/en/development-tools/unicleo-gui.html), a PC application that supports **STM32 Nucleo boards** coupled with an STM32 Nucleo **MEMS expansion board** for data visualization and demonstration of functionality of ST sensors and algorithms.
 - [**AlgoBuilder**](https://www.st.com/content/st_com/en/products/embedded-software/mems-and-sensors-software/inemo-engine-software-libraries/algobuilder.html), a PC application to design a custom processing flow and build the firmware for STM32 Nucleo boards coupled with the MEMS expansions boards, or for form-factor evaluation boards such as the [SensorTile.box](https://www.st.com/en/evaluation-tools/steval-mksbox1v1.html) or the [STWIN](https://www.st.com/en/evaluation-tools/steval-stwinkt1b.html).
 - [**X-CUBE-MEMS1**](https://www.st.com/en/embedded-software/x-cube-mems1.html), an expansion software package for **STM32 Nucleo boards** that includes drivers, various sensor sample applications and advanced motion libraries.
@@ -97,7 +97,7 @@ The program supports the following options:
 iis2iclx_tilt_angle_DT_generator.exe -h
 ```
 
-2. The following command executes the program with the modified parameters::
+2. The following command executes the program with the modified parameters:
 ```
 iis2iclx_tilt_angle_DT_generator.exe -a 25 -o my_folder
 ```
@@ -138,7 +138,7 @@ Further examples of filter coefficients can be found in Table 3 in the [AN5536](
 
 ![MLC window: End of filter configuration](./images/end_filters.png)
 
-In the next step select only the **Mean** feature for the **ACC_X** and **ACC_Y** inputs (or only the **Mean** feature for the "**filter IIR2 on ACC X**" and "**filter IIR2 on ACC Y**" inputs if the IIR2 filter was used - as in this tutorial). In this tutorial, the Window lenth was set to 1, which means that the filtered output acceleration samples are no further proccessed.
+In the next step select only the **Mean** feature for the **ACC_X** and **ACC_Y** inputs (or only the **Mean** feature for the "**filter IIR2 on ACC X**" and "**filter IIR2 on ACC Y**" inputs if the IIR2 filter was used - as in this tutorial). In this tutorial, the Window length was set to 1, which means that the filtered output acceleration samples are no further proccessed.
 
 The next few steps will use the output of the *iis2iclx_tilt_angle_DT_generator.exe* program that was printed on the Command Prompt. Unico-GUI will ask to "*Insert the attribute name used in the decision tree file for the feature 1*". Copy/paste the appropriate text from the Command Prompt into the Unico-GUI. The same procedure should be repeated for the feature 2. In this tutorial, the attribute name for feature 1 is "*mean_x*" and for feature 2 "*mean_y*" (text between the quotation marks). 
 
